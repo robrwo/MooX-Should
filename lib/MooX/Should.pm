@@ -33,4 +33,47 @@ sub import {
 
 }
 
+=head1 SYNOPSIS
+
+  use Moo;
+
+  use MooX::Should;
+  use Types::Standard -types;
+
+  has thing => (
+    is     => 'ro',
+    should => Int,
+  );
+
+=head1 DESCRIPTION
+
+This module is basically a shortcut for
+
+  use Devel::StrictMode;
+  use PerlX::Maybe;
+
+  has thing => (
+          is  => 'ro',
+    maybe isa => STRICT ? Int : undef,
+  );
+
+It allows you to completely ignore any type restrictions on L<Moo>
+attributes at runtime, or to selectively enable them.
+
+=head1 SEE ALSO
+
+=over
+
+=item *
+
+L<Devel::StrictMode>
+
+=item *
+
+L<PerlX::Maybe>
+
+=back
+
+=cut
+
 1;
