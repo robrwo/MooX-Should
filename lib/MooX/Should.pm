@@ -1,5 +1,7 @@
 package MooX::Should;
 
+# ABSTRACT: optional type restrictions for Moo attributes
+
 use Moo       ();
 use Moo::Role ();
 
