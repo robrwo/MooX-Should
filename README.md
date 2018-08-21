@@ -4,7 +4,7 @@ MooX::Should - optional type restrictions for Moo attributes
 
 # VERSION
 
-version v0.1.0
+version v0.1.1
 
 # SYNOPSIS
 
