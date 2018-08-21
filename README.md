@@ -37,7 +37,7 @@ has thing => (
 It allows you to completely ignore any type restrictions on [Moo](https://metacpan.org/pod/Moo)
 attributes at runtime, or to selectively enable them.
 
-Note that you can specify a (weaker) type striction for an attribute:
+Note that you can specify a (weaker) type restriction for an attribute:
 
 ```perl
 use Types::Common::Numeric qw/ PositiveNum /;

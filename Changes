@@ -1,6 +1,8 @@
 Revision history for MooX-Should:
 
 {{$NEXT}}
+  [Documentation]
+  - Fixed typo.
 
 v0.1.0    2018-08-21 17:45:12+01:00 Europe/London
   - Initial release.

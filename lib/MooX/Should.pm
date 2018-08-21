@@ -64,7 +64,7 @@ This module is basically a shortcut for
 It allows you to completely ignore any type restrictions on L<Moo>
 attributes at runtime, or to selectively enable them.
 
-Note that you can specify a (weaker) type striction for an attribute:
+Note that you can specify a (weaker) type restriction for an attribute:
 
   use Types::Common::Numeric qw/ PositiveNum /;
   use Types::Standard qw/ Int /;
