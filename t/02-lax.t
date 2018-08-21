@@ -3,6 +3,9 @@ BEGIN {
 }
 
 use Test::Most;
+use Devel::StrictMode;
+
+plan skip_all => "strict mode enabled" if STRICT;
 
 use lib 't/lib';
 use TestClass;
