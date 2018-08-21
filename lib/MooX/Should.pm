@@ -7,7 +7,7 @@ use Moo::Role ();
 
 use Devel::StrictMode;
 
-our $VERSION = 'v0.1.0';
+our $VERSION = 'v0.1.1';
 
 sub import {
     my ($class) = @_;
