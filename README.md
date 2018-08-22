@@ -4,7 +4,7 @@ MooX::Should - optional type restrictions for Moo attributes
 
 # VERSION
 
-version v0.1.1
+version v0.1.2
 
 # SYNOPSIS
 
@@ -40,7 +40,7 @@ attributes at runtime, or to selectively enable them.
 Note that you can specify a (weaker) type restriction for an attribute:
 
 ```perl
-use Types::Common::Numeric qw/ PositiveNum /;
+use Types::Common::Numeric qw/ PositiveInt /;
 use Types::Standard qw/ Int /;
 
 has thing => (
@@ -83,6 +83,10 @@ feature.
 # AUTHOR
 
 Robert Rothenberg <rrwo@cpan.org>
+
+# CONTRIBUTOR
+
+Mohammad S Anwar <mohammad.anwar@yahoo.com>
 
 # COPYRIGHT AND LICENSE
 
