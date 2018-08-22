@@ -1,6 +1,8 @@
 Revision history for MooX-Should:
 
 {{$NEXT}}
+  [Documentation]
+  - Fixed typo in example (Mohammad S Anwar).
 
 v0.1.1    2018-08-21 17:55:32+01:00 Europe/London
   [Documentation]
