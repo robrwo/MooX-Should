@@ -1,6 +1,9 @@
 Revision history for MooX-Should:
 
 {{$NEXT}}
+  [Documentation]
+  - Added INSTALL file to the distribution.
+
   [Tests]
   - Updated test to be consistent with example code in POD
     (Mohammad S Anwar).
