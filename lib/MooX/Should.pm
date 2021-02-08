@@ -26,6 +26,8 @@ sub import {
 
     my $target = caller;
 
+    my $has = $target->can('has') or return;
+
     my $installer =
       $USE_MOO_UTILS
       ? \&Moo::_Utils::_install_tracked
@@ -33,21 +35,20 @@ sub import {
           ? \&Moo::_install_tracked
           : \&Moo::Role::_install_tracked;
 
-    if ( my $has = $target->can('has') ) {
+    my $wrapper = sub {
+        my ( $name, %args ) = @_;
 
-        my $wrapper = sub {
-            my ( $name, %args ) = @_;
+        if (STRICT) {
+            $args{isa} = delete $args{should} if exists $args{should}
+        } else {
+            delete $arg{should}
+        }
 
-            if ( my $should = delete $args{should} ) {
-                $args{isa} = $should if STRICT;
-            }
+        return $has->( $name => %args );
+    };
 
-            return $has->( $name => %args );
-        };
+    $installer->( $target, "has", $wrapper );
 
-        $installer->( $target, "has", $wrapper );
-
-    }
 
 }
 
