@@ -4,6 +4,8 @@ Revision history for MooX-Should:
   [Documentation]
   - Added INSTALL file to the distribution.
 
+  - Bumped copyright year.
+
   [Tests]
   - Updated test to be consistent with example code in POD
     (Mohammad S Anwar).
