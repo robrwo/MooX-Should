@@ -3,3 +3,6 @@
 
 MooX-Should-v*.tar.gz
 MooX-Should-v*/
+
+local/
+cpanfile.snapshot
