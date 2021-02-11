@@ -112,6 +112,10 @@ L<PerlX::Maybe>
 
 =back
 
+=head1 append:AUTHOR
+
+Originally written by Robert Rothenberg <rrwo@cpan.org>.
+
 =cut
 
 1;

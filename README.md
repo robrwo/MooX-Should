@@ -82,11 +82,14 @@ feature.
 
 # AUTHOR
 
-Robert Rothenberg <rrwo@cpan.org>
+Theo van Hoesel <vanhoesel@cpan.org>
+
+Originally written by Robert Rothenberg <rrwo@cpan.org>.
 
 # CONTRIBUTORS
 
 - Mohammad S Anwar <mohammad.anwar@yahoo.com>
+- Robert Rothenberg <rrwo@cpan.org>
 - Zakariyya Mughal <zaki.mughal@gmail.com>
 
 # COPYRIGHT AND LICENSE
