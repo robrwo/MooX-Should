@@ -2,12 +2,23 @@ package MooX::Should;
 
 # ABSTRACT: optional type restrictions for Moo attributes
 
+use version 0.77 ();
+
 use Moo       ();
 use Moo::Role ();
 
+our $USE_MOO_UTILS;
+
+BEGIN {
+    if( version->parse( Moo->VERSION ) >= version->parse('2.003006') ) {
+        $USE_MOO_UTILS = 1;
+        require Moo::_Utils;
+    }
+}
+
 use Devel::StrictMode;
 
-our $VERSION = 'v0.1.3';
+our $VERSION = version->declare('v0.1.3');
 
 sub import {
     my ($class) = @_;
@@ -15,9 +26,11 @@ sub import {
     my $target = caller;
 
     my $installer =
-      $target->isa("Moo::Object")
-      ? \&Moo::_install_tracked
-      : \&Moo::Role::install_tracked;
+      $USE_MOO_UTILS
+      ? \&Moo::_Utils::_install_tracked
+      : $target->isa("Moo::Object")
+          ? \&Moo::_install_tracked
+          : \&Moo::Role::_install_tracked;
 
     if ( my $has = $target->can('has') ) {
 
