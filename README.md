@@ -84,9 +84,10 @@ feature.
 
 Robert Rothenberg <rrwo@cpan.org>
 
-# CONTRIBUTOR
+# CONTRIBUTORS
 
-Mohammad S Anwar <mohammad.anwar@yahoo.com>
+- Mohammad S Anwar <mohammad.anwar@yahoo.com>
+- Zakariyya Mughal <zaki.mughal@gmail.com>
 
 # COPYRIGHT AND LICENSE
 
