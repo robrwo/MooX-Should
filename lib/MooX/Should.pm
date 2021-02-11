@@ -18,7 +18,7 @@ BEGIN {
 
 use Devel::StrictMode;
 
-our $VERSION = 'v0.1.3'; $VERSION = version->declare($VERSION);
+our $VERSION = 'v0.1.4';
 
 
 sub import {

@@ -1,6 +1,8 @@
 Revision history for MooX-Should:
 
 {{$NEXT}}
+
+v0.1.3    2021-02-11 20:18:18+01:00 Europe/Amsterdam
   [Bug Fixes]
   - Fix how has is modified for Moo roles on newer versions of Moo (Zakariyya Mughal).
 
