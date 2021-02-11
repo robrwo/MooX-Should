@@ -1,6 +1,11 @@
 Revision history for MooX-Should:
 
 {{$NEXT}}
+  [Bug Fixes]
+  - Fix how has is modified for Moo roles on newer versions of Moo (Zakariyya Mughal).
+
+  - Change module VERSION to be a proper VERSION object.
+
   [Documentation]
   - Added INSTALL file to the distribution.
 
