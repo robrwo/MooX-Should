@@ -3,6 +3,7 @@
 
 requires "Devel::StrictMode" => "0";
 requires "Moo" => "0";
+requires "version" => "0.77";
 
 on 'test' => sub {
   requires "File::Spec" => "0";
