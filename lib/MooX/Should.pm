@@ -18,13 +18,15 @@ BEGIN {
 
 use Devel::StrictMode;
 
-our $VERSION = 'v0.1.3'; $VERSION = version->declare($VERSION);
+our $VERSION = 'v0.1.4';
 
 
 sub import {
     my ($class) = @_;
 
     my $target = caller;
+
+    my $has = $target->can('has') or return;
 
     my $installer =
       $USE_MOO_UTILS
@@ -33,21 +35,20 @@ sub import {
           ? \&Moo::_install_tracked
           : \&Moo::Role::_install_tracked;
 
-    if ( my $has = $target->can('has') ) {
+    my $wrapper = sub {
+        my ( $name, %args ) = @_;
 
-        my $wrapper = sub {
-            my ( $name, %args ) = @_;
+        if (STRICT) {
+            $args{isa} = delete $args{should} if exists $args{should}
+        } else {
+            delete $arg{should}
+        }
 
-            if ( my $should = delete $args{should} ) {
-                $args{isa} = $should if STRICT;
-            }
+        return $has->( $name => %args );
+    };
 
-            return $has->( $name => %args );
-        };
+    $installer->( $target, "has", $wrapper );
 
-        $installer->( $target, "has", $wrapper );
-
-    }
 
 }
 
